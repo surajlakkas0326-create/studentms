@@ -1,0 +1,20 @@
+[
+  {
+    "id": "mi2ms3cfufqhf",
+    "name": "suraj",
+    "age": 21,
+    "course": "cse"
+  },
+  {
+    "id": "mi2msvo4g4pss",
+    "name": "raj",
+    "age": 22,
+    "course": "EE"
+  },
+  {
+    "id": "mi2n2t0umcd7t",
+    "name": "shweta",
+    "age": 22,
+    "course": "CSE"
+  }
+]

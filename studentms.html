@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="container">
+    <h1> Student Management System</h1>
+    <p class="subtitle">Add, edit, delete students — clean UI for B.Tech submission</p>
+  </header>
+
+  <main class="container grid">
+    <!-- Form Card -->
+    <section class="card">
+      <h2>Add / Edit Student</h2>
+      <form id="studentForm" novalidate>
+        <input type="hidden" id="studentId"/>
+
+        <div class="field">
+          <label for="name">Name <span>*</span></label>
+          <input id="name" placeholder="e.g., Rohan Patil" autocomplete="off"/>
+          <small class="error" data-err="name"></small>
+        </div>
+
+        <div class="field">
+          <label for="age">Age <span>*</span></label>
+          <input id="age" type="number" placeholder="e.g., 21" autocomplete="off"/>
+          <small class="error" data-err="age"></small>
+        </div>
+
+        <div class="field">
+          <label for="course">Course <span>*</span></label>
+          <input id="course" placeholder="e.g., CSE" autocomplete="off"/>
+          <small class="error" data-err="course"></small>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Save</button>
+          <button type="button" id="resetBtn" class="btn">Reset</button>
+        </div>
+        <p id="formMsg" class="msg"></p>
+      </form>
+    </section>
+
+    <!-- Table Card -->
+    <section class="card">
+      <div class="list-header">
+        <h2>Students</h2>
+        <input id="search" class="search" placeholder="Search by name or course..." />
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Course</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="studentsBody">
+            <tr><td colspan="5" class="muted">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p id="listMsg" class="msg"></p>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <small>Built with ❤️ for learning • Vanilla JS • Modern UI</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
